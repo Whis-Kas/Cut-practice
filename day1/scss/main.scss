@@ -81,7 +81,6 @@
 .home_page{
   display: flex;
 >.main_left{
-    width: 80%;
     >h1{
         color: #d3a3ff;
         font-family: 'nixie_oneregular';
@@ -102,8 +101,20 @@
         margin: 0;
         text-align: center;
     }
-
+    width: 80%;
 }
+}
+.main_left{
+    div
+    { 
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        margin: 10px 0 50px 0px;
+        text-align: center;
+
+    }
+
 }
 .main_right{
     margin: 74px 38px 46px 0;
@@ -133,4 +144,29 @@
     }
     @include setWidth();
     display: flex;
+}
+@media screen and (max-width:960px){
+   
+    .main{
+        padding: 10px;
+        width: 100%;
+    }
+    .footer{
+        width: 100%;
+    }
+    .home_page{
+        display: block;
+    }
+    .main_left{
+       width: 100% !important;
+    }
+    .main_right{
+        margin: 70px 0;
+        text-align: center;
+    }
+    .page_content{
+        display: block;
+       
+    }
+
 }

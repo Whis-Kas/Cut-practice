@@ -1,4 +1,16 @@
 @import "_varables";
+.navbar{
+    >i{
+        font-size: 30px;
+        color:#99fa99;
+    }
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: 1px #99fa99 solid;
+    padding: 11px;
+    border-radius: 5px;
+}
 .header_nav {
   > h1 {
    
@@ -68,7 +80,67 @@
     }
      text-align: center;
   }
+  position: relative;
 }
 .nav_active{
     color:#99fa99 !important;
+}
+
+@media screen and (max-width:960px){
+    .header_nav{
+        width: 100%;
+        padding: 100px 0;
+    }
+   nav{
+       >ul
+       { li{
+           >a{
+               width: 100%;
+               padding: 10px !important;
+               color:white !important;
+           }
+          
+          width: 100%;
+          background: #077054;
+          opacity: .9;
+          border-width: 1px;
+          border-color: #99fa99;
+          border-style: solid;
+       }
+       li:hover{
+           background-color: rgba(153, 250, 153, 0.8);
+           opacity: 1;
+       }
+       li:hover a{
+        color:white !important;
+       }
+       position: absolute;
+       width: 90%;
+       top:80px;
+       right: 20px;
+       text-align: left !important;
+    }
+   }
+   .nav_lists{
+       width: 90%;
+       box-sizing: border-box;
+   }
+   .arrow_text{
+       >i{
+           font-size: 20px;
+           line-height: 41px;
+           color:#99fa99;
+       }
+       width: 10%;
+       float: right;
+       text-align: center;
+       border-width: 0px 0px 0px 2px;
+       border-color: #99fa99;
+       border-style: solid;
+       height: 100%;
+       box-sizing: border-box;
+       
+   }
+
+
 }

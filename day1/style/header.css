@@ -72,4 +72,10 @@ body {
   position: absolute;
   top: 0;
 }
+
+@media screen and (max-width: 960px) {
+  .header_contain {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=header.css.map */
