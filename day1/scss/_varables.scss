@@ -1,0 +1,7 @@
+$headerbgc:#e6e7e9;
+$width:960px;
+@mixin  setWidth($width:$width){
+   width:$width;
+   margin: 0 auto;
+   box-sizing: border-box;
+} 

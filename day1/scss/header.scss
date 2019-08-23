@@ -1,0 +1,60 @@
+@import "_varables"; 
+body{
+    padding:0;
+    margin: 0;
+    background-color: #077054;
+}
+.header
+{
+    background-color: $headerbgc;
+    position: sticky;
+    top:0;
+    opacity: .8;
+}
+.header_contain
+{
+    display: flex;
+    @include setWidth();
+    line-height: 41px;
+}
+.header_left
+{
+    a{
+        display: inline-block;
+        text-decoration: none;
+        height: 100%;
+        color: #077054;
+    }
+    a:hover{
+        color:black;
+    }
+    font-weight: bold;
+}
+.header_right
+{
+    li{
+        padding: 0 20px;
+    }
+    a{
+        text-decoration: none;
+        color:#9a9a9a;
+        height: 100%;
+        display: inline-block;
+        font-size: 13px;
+    }
+    a:hover{
+        color:#077054;
+    }
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+.nav_lists{
+    >a{
+        position: absolute;
+        top:0;
+    }
+    position: relative;
+}

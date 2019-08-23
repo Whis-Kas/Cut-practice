@@ -1,0 +1,74 @@
+@import "_varables";
+.header_nav {
+  > h1 {
+   
+    > a {
+      color: #99fa99;
+      font-size: 50px;
+      font-weight: 100;
+      text-decoration: none;
+    }
+    >span {
+        color: #b6d8cf;
+        margin: 0;
+        cursor: pointer;
+        display: block;
+    }
+    margin: 0;
+    padding: 30px 0;
+  }
+  @include setWidth();
+  text-align: center;
+  > nav {
+    >ul{
+        >li{
+            > a {
+                text-decoration: none;
+                color: #b6d8cf;
+                display: inline-block;
+                padding: 10px 46px;
+                text-transform: uppercase;
+                font-size: 18px;
+              }
+              >a:hover{
+                  color:#d3a3ff;
+              }
+            >ul{
+                >li{
+                    padding: 10px 0;
+                >a{
+                    text-decoration: none;
+                    color: #b6d8cf;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+                >a:hover{
+                    color:#d3a3ff;
+                }
+                }
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                top:100%;
+                width: 100%;
+                text-align: center;
+                background-color: #077054;
+                display: none;
+            }
+            position: relative;
+            display: inline-block;
+        }
+        >li:hover ul{
+            display: block;
+        }
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+     text-align: center;
+  }
+}
+.nav_active{
+    color:#99fa99 !important;
+}
