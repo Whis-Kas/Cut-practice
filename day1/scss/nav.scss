@@ -10,6 +10,10 @@
     border: 1px #99fa99 solid;
     padding: 11px;
     border-radius: 5px;
+    display: none;
+}
+.arrow_text{
+    display: none;
 }
 .header_nav {
   > h1 {
@@ -47,12 +51,15 @@
               }
             >ul{
                 >li{
-                    padding: 10px 0;
+                   
                 >a{
                     text-decoration: none;
                     color: #b6d8cf;
                     text-transform: uppercase;
                     font-size: 18px;
+                    padding: 10px 0;
+                    display: inline-block;
+                    width: 100%;
                 }
                 >a:hover{
                     color:#d3a3ff;
@@ -73,6 +80,7 @@
         }
         >li:hover ul{
             display: block;
+            transition:all 1s;
         }
         list-style: none;
         padding: 0;
@@ -91,13 +99,15 @@
         width: 100%;
         padding: 100px 0;
     }
+
    nav{
        >ul
-       { li{
+       { >li{
            >a{
                width: 100%;
-               padding: 10px !important;
+               padding: 10px 10px !important;
                color:white !important;
+               box-sizing: border-box;
            }
           
           width: 100%;
@@ -107,17 +117,34 @@
           border-color: #99fa99;
           border-style: solid;
        }
-       li:hover{
+       li a:hover,li a:hover +div{
            background-color: rgba(153, 250, 153, 0.8);
            opacity: 1;
+           color:white !important;
        }
-       li:hover a{
+       li>ul {
+        >li>a{
+            padding: 10px 10px !important;
+            color:white !important;
+            box-sizing: border-box;
+
+        }
+         position: relative !important;
+         text-align: left !important;
+         border-top: #99fa99 1px solid;
+         
+       }
+       li>ul:hover li{
+        background-color: rgba(153, 250, 153, 0.8);
+        opacity: 1;
         color:white !important;
+
        }
        position: absolute;
        width: 90%;
        top:80px;
        right: 20px;
+       display: none;
        text-align: left !important;
     }
    }
@@ -139,8 +166,14 @@
        border-style: solid;
        height: 100%;
        box-sizing: border-box;
+       display: block ;
+       cursor: pointer;
        
    }
+   .navbar{
+       display: block;
+   }
+
 
 
 }
