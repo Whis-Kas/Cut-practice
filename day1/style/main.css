@@ -188,6 +188,14 @@
   }
   .footer {
     width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .footer div {
+    padding: 20px 0 0 0;
+  }
+  .footer div > p {
+    padding: 10px 0;
   }
   .home_page {
     display: block;
@@ -201,6 +209,9 @@
   }
   .page_content {
     display: block;
+  }
+  .connect {
+    padding: 10px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
