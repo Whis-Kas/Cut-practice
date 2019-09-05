@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+    <script defer src="main.js" ></script>
+    <title>Document</title>
+    <style>
+    body{
+     
+    }
+    .calendar{
+        border: 1px solid #fde;
+        margin-top: 10px;
+        border-radius: 10px;
+     
+    }
+    [v-cloak]
+    {
+        display: none;
+    }
+    .text_center{
+        text-align: center;
+    }
+    .week{
+        display: flex;
+    }
+    .weekday{
+        display: flex;
+       padding:20px 0;
+       border-bottom: 1px solid #fde;
+       
+    }
+    .weekday>div{
+        flex: 1;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    .week>div{
+        line-height: 30px;
+        flex: 1;
+       
+    }
+    .day::after{
+        content: attr(data-date);
+        display:block;
+        position: absolute;
+        top:50%;
+        width: 30px;
+        font-size: 30px;
+        text-align: center;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .day{
+        position: relative;
+        height: 110px;
+        border-bottom: 1px solid #fde;
+        border-left: 1px solid #fde;
+     
+    }
+    .today{
+        background-color:#fde;
+        color:white;
+    }
+    .other{
+        opacity: .4;
+    }
+    .weekend{
+        color: red;
+
+    }
+    .border{
+        border-left:none;
+    }
+    .text_center>button{
+       border: 0px;
+       padding: 10px 20px;
+       color:white;
+       background-color:#fde;
+       border-radius: 5px;
+       font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+    <h2 class="text_center">{{calendar.year}}年{{calendar.month+1}}月{{calendar.day}}日</h2>
+    <div class="text_center">
+        <button @click="setyear(-1)">上一年</button>
+        <button @click="setmonth(-1)">上個月</button>
+        <button @click="getdate">今天</button>
+        <button @click="setmonth(1)">下個月</button>
+        <button @click="setyear(1)">下一年</button>
+    </div>
+    <div class="calendar">
+        <div class="weekday">
+        <div>日</div>
+        <div>一</div>
+        <div>二</div>
+        <div>三</div>
+        <div>四</div>
+        <div>五</div>
+        <div>六</div>
+        </div>
+        <div class="week">
+            <div v-for="i in 7">
+                <div class="day" v-for="j in 6" :data-date="calendarDay[i-1+7*(j-1)].date"
+                :class="{
+                    other:checkother(calendarDay[i-1+7*(j-1)]),
+                    today:checktoday(calendarDay[i-1+7*(j-1)]),
+                    weekend:checkweekend(calendarDay[i-1+7*(j-1)]),
+                    border:(i-1+7*(j-1))%7==0,
+                }"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+</html>
